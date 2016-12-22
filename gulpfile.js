@@ -29,7 +29,7 @@ g.task("w", ["s"], function() {
 g.task("scss", function() {
     g.src(u.scss)
         .pipe(p.sass())
-        .pipe(p.dest(u.css))
+        .pipe(g.dest(u.css))
         .pipe(p.cssnano())
         .pipe(p.rename("main.min.css"))
         .pipe(g.dest(u.css));
